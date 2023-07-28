@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  app:
+    build:
+      context: .
+    command: >
+      sh -c "python3 main.py"
+    environment:
+      - dockerhub_username=${dockerhub_username}
+      - dockerhub_password=${dockerhub_password}
+
